@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Gabinete de Curiosidades de Del Toro - Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="video-background-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="video/pressvid.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+
+    <div id="main-content">
+        <header>
+            <h1>El Gabinete de Curiosidades de Del Toro</h1>
+            <h2>Un Quiz Macabro y Maravilloso</h2>
+        </header>
+
+        <!-- Welcome Area First -->
+        <section id="welcome-area">
+            <h2>Bienvenido al Gabinete</h2>
+            <p>Has desbloqueado la entrada. Explora el video de bienvenida o adéntrate directamente en el quiz.</p>
+            <div class="welcome-buttons">
+                <button id="enter-quiz-button">Iniciar el Quiz</button>
+                <button id="show-welcome-video-button">Ver Bienvenida</button>
+            </div>
+        </section>
+
+        <!-- Quiz Section After Welcome -->
+        <main id="quiz-section" class="hidden">
+            <div id="question-area" class="hidden">
+                <img id="question-image" src="" alt="Imagen relacionada a la pregunta" class="hidden">
+                <p id="question-text"></p>
+                <div id="options-container"></div>
+                <p id="feedback"></p>
+                <button id="next-button" class="hidden">Siguiente Pregunta</button>
+            </div>
+            <!-- Start Area (Video Player) inside Quiz Section -->
+            <div id="start-area" class="hidden">
+                <h3>Video de Bienvenida</h3>
+                 <video id="welcome-video" controls>
+                    <source src="video/pressvid.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                 </video>
+                 <button id="start-quiz-from-video-button">Comenzar Quiz</button>
+            </div>
+            <div id="results-area" class="hidden">
+                <h2>Resultados Finales</h2>
+                <p id="score"></p>
+                <p id="result-message"></p>
+                <button id="restart-button">Intentar de Nuevo</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Inspirado por la mente de Guillermo del Toro</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
