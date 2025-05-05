@@ -1,0 +1,110 @@
+/* landing_style.css */
+
+:root {
+    --primary-bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --accent-color-1: #8B0000;
+    --border-color: #444;
+    --input-bg: #333;
+    --button-bg: var(--accent-color-1);
+    --button-hover-bg: #a00000;
+    --error-color: #e57373; /* Lighter red for error text */
+
+    --title-font: 'Cinzel Decorative', serif;
+    --body-font: 'Lora', serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://www.transparenttextures.com/patterns/dark-wood.png');
+}
+
+.container {
+    max-width: 500px;
+    padding: 3rem;
+    background-color: rgba(42, 42, 42, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f0e6d2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #bdae93;
+}
+
+.input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="password"] {
+    font-family: var(--body-font);
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    flex-grow: 1; /* Allow input to take space */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input[type="password"]::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+button {
+    font-family: var(--title-font);
+    font-weight: 700;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.error {
+    color: var(--error-color);
+    font-weight: bold;
+    min-height: 1.2em; /* Reserve space */
+    margin-top: 1rem;
+} 
